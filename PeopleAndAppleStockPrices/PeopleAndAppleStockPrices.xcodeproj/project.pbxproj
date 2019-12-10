@@ -14,9 +14,9 @@
 		577E5BF621BA8BA20083EB97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BF421BA8BA20083EB97 /* LaunchScreen.storyboard */; };
 		577E5BFF21BA8C3B0083EB97 /* userinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BFE21BA8C3B0083EB97 /* userinfo.json */; };
 		577E5C0121BA8C5C0083EB97 /* applstockinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 577E5C0021BA8C5C0083EB97 /* applstockinfo.json */; };
-		9F1C7095239F17EF005EF681 /* RandomUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C7094239F17EF005EF681 /* RandomUser.json */; };
 		9F1C7097239F1CB9005EF681 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C7096239F1CB9005EF681 /* user.swift */; };
 		9F1C709B239F1F99005EF681 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C709A239F1F99005EF681 /* DetailUserViewController.swift */; };
+		9F1C709D239F2751005EF681 /* NetworkErrorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C709C239F2751005EF681 /* NetworkErrorAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		577E5BF721BA8BA20083EB97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		577E5BFE21BA8C3B0083EB97 /* userinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userinfo.json; sourceTree = "<group>"; };
 		577E5C0021BA8C5C0083EB97 /* applstockinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = applstockinfo.json; sourceTree = "<group>"; };
-		9F1C7094239F17EF005EF681 /* RandomUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RandomUser.json; sourceTree = "<group>"; };
 		9F1C7096239F1CB9005EF681 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		9F1C709A239F1F99005EF681 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
+		9F1C709C239F2751005EF681 /* NetworkErrorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		577E5BEA21BA8BA10083EB97 /* PeopleAndAppleStockPrices */ = {
 			isa = PBXGroup;
 			children = (
-				9F1C7094239F17EF005EF681 /* RandomUser.json */,
+				9F1C709C239F2751005EF681 /* NetworkErrorAPI.swift */,
 				9F1C7096239F1CB9005EF681 /* user.swift */,
 				577E5BED21BA8BA10083EB97 /* UserViewController.swift */,
 				9F1C709A239F1F99005EF681 /* DetailUserViewController.swift */,
@@ -156,7 +156,6 @@
 				577E5BFF21BA8C3B0083EB97 /* userinfo.json in Resources */,
 				577E5C0121BA8C5C0083EB97 /* applstockinfo.json in Resources */,
 				577E5BF621BA8BA20083EB97 /* LaunchScreen.storyboard in Resources */,
-				9F1C7095239F17EF005EF681 /* RandomUser.json in Resources */,
 				577E5BF321BA8BA20083EB97 /* Assets.xcassets in Resources */,
 				577E5BF121BA8BA10083EB97 /* Main.storyboard in Resources */,
 			);
@@ -173,6 +172,7 @@
 				577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */,
 				9F1C709B239F1F99005EF681 /* DetailUserViewController.swift in Sources */,
 				9F1C7097239F1CB9005EF681 /* user.swift in Sources */,
+				9F1C709D239F2751005EF681 /* NetworkErrorAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

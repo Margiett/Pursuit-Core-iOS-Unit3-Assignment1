@@ -47,7 +47,8 @@ extension User {
         var userExtension = [UserInfo]()
 
         // what does Bundle.main do ????
-        guard let fileURL = Bundle.main.url(forResource: "RandomUser", withExtension: "json") else {
+        //// this access the url from the json
+        guard let fileURL = Bundle.main.url(forResource: "userinfo", withExtension: "json") else {
             fatalError("there is an issue with the url")
         }
         do {

@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
-
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var didSetUser = [UserInfo]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadData()
+        tableView.dataSource = self
+        searchBar.delegate = self
+    }
 
 }
 

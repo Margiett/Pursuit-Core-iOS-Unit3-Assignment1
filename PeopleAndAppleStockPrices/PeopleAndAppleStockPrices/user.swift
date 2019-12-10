@@ -43,7 +43,7 @@ struct Picture: Codable {
 }
 
 extension User {
-    static func getRandomUser() -> [UserInfo] {
+    static func getUser() -> [UserInfo] {
         var userExtension = [UserInfo]()
 
         // what does Bundle.main do ????

@@ -17,8 +17,7 @@ class DetailUserViewController: UIViewController {
     var userInfo: UserInfo?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+    
     }
     
 

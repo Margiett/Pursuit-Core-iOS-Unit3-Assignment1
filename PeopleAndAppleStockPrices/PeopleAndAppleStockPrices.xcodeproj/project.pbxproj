@@ -17,6 +17,7 @@
 		9F1C7097239F1CB9005EF681 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C7096239F1CB9005EF681 /* user.swift */; };
 		9F1C709B239F1F99005EF681 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C709A239F1F99005EF681 /* DetailUserViewController.swift */; };
 		9F1C709D239F2751005EF681 /* NetworkErrorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C709C239F2751005EF681 /* NetworkErrorAPI.swift */; };
+		9FDD0A7223A06BB000E17F76 /* userPicture .swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDD0A7123A06BB000E17F76 /* userPicture .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9F1C7096239F1CB9005EF681 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		9F1C709A239F1F99005EF681 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
 		9F1C709C239F2751005EF681 /* NetworkErrorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorAPI.swift; sourceTree = "<group>"; };
+		9FDD0A7123A06BB000E17F76 /* userPicture .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "userPicture .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				9F1C7096239F1CB9005EF681 /* user.swift */,
 				577E5BED21BA8BA10083EB97 /* UserViewController.swift */,
 				9F1C709A239F1F99005EF681 /* DetailUserViewController.swift */,
+				9FDD0A7123A06BB000E17F76 /* userPicture .swift */,
 				577E5BEF21BA8BA10083EB97 /* Main.storyboard */,
 				577E5BFD21BA8BE20083EB97 /* Supporting Files */,
 				577E5BF721BA8BA20083EB97 /* Info.plist */,
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FDD0A7223A06BB000E17F76 /* userPicture .swift in Sources */,
 				577E5BEE21BA8BA10083EB97 /* UserViewController.swift in Sources */,
 				577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */,
 				9F1C709B239F1F99005EF681 /* DetailUserViewController.swift in Sources */,

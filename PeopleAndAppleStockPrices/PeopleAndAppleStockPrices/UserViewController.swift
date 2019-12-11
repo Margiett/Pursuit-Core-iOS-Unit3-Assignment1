@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             let userFirstName = userInfo.name.first ?? ""
             let userLastName = userInfo.name.last ?? ""
             
-            let fullName = ("\(userFirstName.capitalized) \(userLastName.capitalized)")
+            let fullName = ("\(userFirstName) \(userLastName)").capitalized
             
             cell.textLabel?.text = fullName.capitalized
             cell.detailTextLabel?.text = userInfo.location.city.capitalized

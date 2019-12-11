@@ -17,6 +17,8 @@
 		9F1C7097239F1CB9005EF681 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C7096239F1CB9005EF681 /* user.swift */; };
 		9F1C709B239F1F99005EF681 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C709A239F1F99005EF681 /* DetailUserViewController.swift */; };
 		9F1C709D239F2751005EF681 /* NetworkErrorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C709C239F2751005EF681 /* NetworkErrorAPI.swift */; };
+		9F59D7D223A19CE20036E5D8 /* AppleStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59D7D123A19CE20036E5D8 /* AppleStockViewController.swift */; };
+		9F872D0A23A18787008BAE71 /* appleStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F872D0923A18787008BAE71 /* appleStock.swift */; };
 		9FDD0A7223A06BB000E17F76 /* userPicture .swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDD0A7123A06BB000E17F76 /* userPicture .swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		9F1C7096239F1CB9005EF681 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		9F1C709A239F1F99005EF681 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
 		9F1C709C239F2751005EF681 /* NetworkErrorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorAPI.swift; sourceTree = "<group>"; };
+		9F59D7D123A19CE20036E5D8 /* AppleStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStockViewController.swift; sourceTree = "<group>"; };
+		9F872D0923A18787008BAE71 /* appleStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appleStock.swift; sourceTree = "<group>"; };
 		9FDD0A7123A06BB000E17F76 /* userPicture .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "userPicture .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +54,7 @@
 		577E5BDF21BA8BA10083EB97 = {
 			isa = PBXGroup;
 			children = (
+				9F59D7D023A19AF30036E5D8 /* AppleStock */,
 				577E5BEA21BA8BA10083EB97 /* PeopleAndAppleStockPrices */,
 				577E5BE921BA8BA10083EB97 /* Products */,
 			);
@@ -96,6 +101,15 @@
 				577E5C0021BA8C5C0083EB97 /* applstockinfo.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		9F59D7D023A19AF30036E5D8 /* AppleStock */ = {
+			isa = PBXGroup;
+			children = (
+				9F872D0923A18787008BAE71 /* appleStock.swift */,
+				9F59D7D123A19CE20036E5D8 /* AppleStockViewController.swift */,
+			);
+			path = AppleStock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FDD0A7223A06BB000E17F76 /* userPicture .swift in Sources */,
+				9F872D0A23A18787008BAE71 /* appleStock.swift in Sources */,
 				577E5BEE21BA8BA10083EB97 /* UserViewController.swift in Sources */,
 				577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */,
+				9F59D7D223A19CE20036E5D8 /* AppleStockViewController.swift in Sources */,
 				9F1C709B239F1F99005EF681 /* DetailUserViewController.swift in Sources */,
 				9F1C7097239F1CB9005EF681 /* user.swift in Sources */,
 				9F1C709D239F2751005EF681 /* NetworkErrorAPI.swift in Sources */,

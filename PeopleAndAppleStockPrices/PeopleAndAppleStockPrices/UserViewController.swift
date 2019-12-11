@@ -25,41 +25,45 @@ class ViewController: UIViewController {
     }
     func loadData() {
         didSetUser = User.getUser()
-      
-}
+        
+    }
     func searchFilter(for searchText: String) {
         didSetUser = User.getUser().filter { $0.name.first.contains(searchText.lowercased())}
     }
+    //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let userDetail = segue.destination as? DetailUserViewController, let indexPath = tableView.indexPathsForSelectedRows else {
-        fatalError("segue did not work")
-    }
+        guard let userDetail = segue.destination as? DetailUserViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("segue did not work")
+        }
+        userDetail.userInfo = didSetUser[indexPath.row]
+        
+        
     }
 }
 
-    extension ViewController: UITableViewDataSource {
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return didSetUser.count
-        }
-
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return didSetUser.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
-            
-            let userInfo = didSetUser[indexPath.row]
-            
-            //MARK: calling the first and Last name !
-            let userFirstName = userInfo.name.first ?? ""
-            let userLastName = userInfo.name.last ?? ""
-            
-            let fullName = ("\(userFirstName) \(userLastName)").capitalized
-            
-            cell.textLabel?.text = fullName.capitalized
-            cell.detailTextLabel?.text = userInfo.location.city.capitalized
-            
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
+        
+        let userInfo = didSetUser[indexPath.row]
+        
+        //MARK: calling the first and Last name !
+        let userFirstName = userInfo.name.first ?? ""
+        let userLastName = userInfo.name.last ?? ""
+        
+        let fullName = ("\(userFirstName) \(userLastName)").capitalized
+        
+        cell.textLabel?.text = fullName.capitalized
+        cell.detailTextLabel?.text = userInfo.location.city.capitalized
+        
+        return cell
+    }
 }
 extension ViewController: UISearchBarDelegate {
     func searchBarExtension(_ searchBar: UISearchBar, textDidChange searchText: String) {

@@ -21,21 +21,20 @@ struct UserInfo: Codable {
 }
 
 struct UserName: Codable {
-    var title: String
     var first: String
     var last: String
 }
                
 struct Address: Codable {
     var city: String
-    var country: String
+    //var country: String
     
 }
 
-struct Street: Codable {
-    let number: Int
-    let name: String
-}
+//struct Street: Codable {
+//    let number: Int
+//    let name: String
+//}
 
 
 struct Picture: Codable {
@@ -47,7 +46,7 @@ extension User {
         var userExtension = [UserInfo]()
 
         // what does Bundle.main do ????
-        //// this access the url from the json
+        // this access the url from the json
         guard let fileURL = Bundle.main.url(forResource: "userinfo", withExtension: "json") else {
             fatalError("there is an issue with the url")
         }

@@ -15,6 +15,7 @@ class DetailUserViewController: UIViewController {
     @IBOutlet weak var userCityLabel: UILabel!
     
     var userInfo: UserInfo?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -24,13 +25,14 @@ class DetailUserViewController: UIViewController {
         guard let userDetail = userInfo else {
             return
         }
-        // Why I had to but a ? infront of userInfo ????????? ask Antotion tomorrow.
-        userNameLabel.text = "\(userInfo?.name.first.capitalized) \(userInfo?.name.last.capitalized)"
-        userEmailLabel.text = userInfo?.email
-        userCityLabel.text = userInfo?.location.city.capitalized
+      
+        userNameLabel.text = "\(userDetail.name.first.capitalized) \(userDetail.name.last.capitalized)"
+        userEmailLabel.text = userDetail.email
+        userCityLabel.text = userDetail.location.city.capitalized
         
-        // Why it keeps making me put a ? infront of userInfo ??
-        RandomUrlAPI.fetchRandomUser(endpointURLString: "\(userInfo?.picture.medium)") { (result) -> () in
+        //MARK: Calling the Picture here !
+       
+        RandomUrlAPI.fetchRandomUser(endpointURLString: "\(userDetail.picture.medium)") { (result) -> () in
             switch result {
             case .failure(let error):
                 let alertController = UIAlertController(title: "Network Error", message: "\(error)" , preferredStyle: .alert)
@@ -46,9 +48,6 @@ class DetailUserViewController: UIViewController {
                     
                     
                 }
-                
-                
-                
                 
             }
         }

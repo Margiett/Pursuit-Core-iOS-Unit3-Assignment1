@@ -30,7 +30,7 @@ extension AppleStock {
             let appleStockData = try JSONDecoder().decode(AppleStock.self, from: data)
            
             // why is not leting me sort appleStockData ???????????????????????
-            appleStockInfo = appleStockData.date.sorted {$0.date < $1.date}
+            appleStockInfo = appleStockData.sorted {$0.date < $1.date}
             
         } catch {
             fatalError("\(error)")

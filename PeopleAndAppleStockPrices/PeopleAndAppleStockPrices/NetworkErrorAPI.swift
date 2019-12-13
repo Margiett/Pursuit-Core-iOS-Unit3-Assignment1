@@ -1,4 +1,4 @@
-//
+ //
 //  NetworkErrorAPI.swift
 //  PeopleAndAppleStockPrices
 //

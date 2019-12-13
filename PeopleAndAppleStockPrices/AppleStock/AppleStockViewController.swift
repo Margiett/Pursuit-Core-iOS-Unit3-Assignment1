@@ -80,7 +80,7 @@ extension AppleStockViewController: UITableViewDataSource, UITableViewDelegate {
 //MARK: - method needed to implement sections
  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
          
-    return emptyStockArray[section].first?.label
+    return emptyStockArray[section].first?.sectionHeader
     
     }
     

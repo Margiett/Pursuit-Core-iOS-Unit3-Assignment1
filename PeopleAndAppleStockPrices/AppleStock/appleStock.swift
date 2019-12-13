@@ -15,17 +15,39 @@ struct AppleStock: Codable {
     let date: String
     let label: String
     
+    //MARK: Computed property
+    // this code right here is allowing me to show in the header the month and the year
+    var sectionHeader: String {
+        // this code seprated them
+        var monthYear = label.components(separatedBy: " ")
+        // this code removed the day
+        monthYear.remove(at: 1)
+        // this code right here display the month and the year and it separates it with a space
+        return monthYear.joined(separator: " ") // Sept 1 17 => Sep 17
+    }
+    
     //MARK: Sections and Sorting
     static func getAppleStock() -> [[AppleStock]]{
-        let appleStockVC = AppleStock.getStocks()
+    //let stocks = getStocks()
+    var monthTitles = Set<String>()
+    let stockSelection = getStocks()
         
+        // This code is suppose to take away the day of the sections so only the month and the year pops up
+        for appleStockInfo in stockSelection {
+            var label = appleStockInfo.label
+            var monthYear = label.components(separatedBy: " ")
+            monthYear.remove(at: 1)
+            label = monthYear.joined()
+            monthTitles.insert(label)
+        }
         
-        let sortedData = appleStockVC.sorted {$0.date < $1.date}
-        let sectionNames : Set<String> = Set(sortedData.map {($0.date)})
+        let sortedData = stockSelection.sorted {$0.date < $1.date}
+        let sectionNames = Set(sortedData.map {($0.date)}) // unsure if i need this code
         
         var sections = Array(repeating: [AppleStock](), count: sectionNames.count)
         
         var currentIndex = 0
+        var sectionIndex = 0
         var currentSection = sortedData.first?.date ?? nil
         
         for stock in sortedData {
@@ -33,6 +55,7 @@ struct AppleStock: Codable {
                 sections[currentIndex].append(stock)
             } else {
                 currentIndex += 1
+                sectionIndex += 1
                 currentSection = stock.date
                 sections[currentIndex].append(stock)
             }
@@ -42,8 +65,7 @@ struct AppleStock: Codable {
 }
 
 extension AppleStock {
-    static func
-        getStocks() -> [AppleStock] {
+    static func getStocks() -> [AppleStock] {
         
         var appleStockInfo = [AppleStock]()
         
